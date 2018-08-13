@@ -10,11 +10,24 @@ import UIKit
 import BitcoinCashKit
 
 class TopViewController: UIViewController {
+    @IBOutlet private weak var addressLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let privateKey = PrivateKey(network: .testnet, isPublicKeyCompressed: false)
-        let wallet = Wallet(privateKey: privateKey)
-        print(wallet.serialized().description)
+        let wif = PrivateKey(network: .testnet).toWIF()
+        let wallet = try! Wallet(wif: wif)
+        let toAddress = wallet.publicKey.toAddress()
+        addressLabel.text = "toAddress: \(toAddress)"
+        debugLog("toAddress", toAddress)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateBalance()
+    }
+
+    private func updateBalance() {
+
     }
 }
 
