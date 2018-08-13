@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		6E5153F42118B0A700598815 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5153F32118B0A700598815 /* AppDelegate.swift */; };
-		6E5153F62118B0A700598815 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5153F52118B0A700598815 /* ViewController.swift */; };
-		6E5153F92118B0A700598815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5153F72118B0A700598815 /* Main.storyboard */; };
+		6E5153F62118B0A700598815 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5153F52118B0A700598815 /* TopViewController.swift */; };
+		6E5153F92118B0A700598815 /* TopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5153F72118B0A700598815 /* TopViewController.storyboard */; };
 		6E5153FB2118B0A900598815 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5153FA2118B0A900598815 /* Assets.xcassets */; };
 		6E5153FE2118B0A900598815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5153FC2118B0A900598815 /* LaunchScreen.storyboard */; };
 		6E5154082118B77300598815 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5154062118B77300598815 /* KeychainAccess.framework */; };
 		6E5154092118B77300598815 /* BitcoinCashKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5154072118B77300598815 /* BitcoinCashKit.framework */; };
+		6EA6ECB42121DA32002D1E9F /* debugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6ECB32121DA32002D1E9F /* debugLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6E5153F02118B0A700598815 /* bch-wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bch-wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5153F32118B0A700598815 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E5153F52118B0A700598815 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6E5153F82118B0A700598815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6E5153F52118B0A700598815 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		6E5153F82118B0A700598815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TopViewController.storyboard; sourceTree = "<group>"; };
 		6E5153FA2118B0A900598815 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E5153FD2118B0A900598815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E5153FF2118B0A900598815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E5154062118B77300598815 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		6E5154072118B77300598815 /* BitcoinCashKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BitcoinCashKit.framework; path = Carthage/Build/iOS/BitcoinCashKit.framework; sourceTree = "<group>"; };
+		6EA6ECB32121DA32002D1E9F /* debugLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = debugLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +64,12 @@
 			isa = PBXGroup;
 			children = (
 				6E5153F32118B0A700598815 /* AppDelegate.swift */,
-				6E5153F52118B0A700598815 /* ViewController.swift */,
-				6E5153F72118B0A700598815 /* Main.storyboard */,
+				6E5153F52118B0A700598815 /* TopViewController.swift */,
+				6E5153F72118B0A700598815 /* TopViewController.storyboard */,
 				6E5153FA2118B0A900598815 /* Assets.xcassets */,
 				6E5153FC2118B0A900598815 /* LaunchScreen.storyboard */,
 				6E5153FF2118B0A900598815 /* Info.plist */,
+				6EA6ECB32121DA32002D1E9F /* debugLog.swift */,
 			);
 			path = "bch-wallet";
 			sourceTree = "<group>";
@@ -141,7 +144,7 @@
 			files = (
 				6E5153FE2118B0A900598815 /* LaunchScreen.storyboard in Resources */,
 				6E5153FB2118B0A900598815 /* Assets.xcassets in Resources */,
-				6E5153F92118B0A700598815 /* Main.storyboard in Resources */,
+				6E5153F92118B0A700598815 /* TopViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +177,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E5153F62118B0A700598815 /* ViewController.swift in Sources */,
+				6E5153F62118B0A700598815 /* TopViewController.swift in Sources */,
+				6EA6ECB42121DA32002D1E9F /* debugLog.swift in Sources */,
 				6E5153F42118B0A700598815 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,12 +186,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6E5153F72118B0A700598815 /* Main.storyboard */ = {
+		6E5153F72118B0A700598815 /* TopViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6E5153F82118B0A700598815 /* Base */,
 			);
-			name = Main.storyboard;
+			name = TopViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		6E5153FC2118B0A900598815 /* LaunchScreen.storyboard */ = {

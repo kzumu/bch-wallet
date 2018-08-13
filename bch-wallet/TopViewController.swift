@@ -9,9 +9,12 @@
 import UIKit
 import BitcoinCashKit
 
-class ViewController: UIViewController {
+class TopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        let privateKey = PrivateKey(network: .testnet, isPublicKeyCompressed: false)
+        let wallet = Wallet(privateKey: privateKey)
+        print(wallet.serialized().description)
     }
 }
 
