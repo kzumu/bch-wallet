@@ -14,8 +14,16 @@ class TopViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let wif = PrivateKey(network: .testnet).toWIF()
-        let wallet = try! Wallet(wif: wif)
+        var wif: String? = UserDefaultsManager.shared.get(item: .wif)
+        if wif == nil {
+            debugLog("Create new PrivateKey")
+            wif = PrivateKey(network: .testnet).toWIF()
+            UserDefaultsManager.shared.save(item: .wif, value: wif!)
+        } else {
+            debugLog("Found exists PrivateKey")
+        }
+
+        let wallet = try! Wallet(wif: wif!)
         let toAddress = wallet.publicKey.toAddress()
         addressLabel.text = "toAddress: \(toAddress)"
         debugLog("toAddress", toAddress)
