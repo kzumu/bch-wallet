@@ -23,17 +23,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lg-cz-bLD">
+                                <rect key="frame" x="0.0" y="40.5" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZWt-Ug-BG9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2jA-86-uEn"/>
+                            <constraint firstItem="3Lg-cz-bLD" firstAttribute="top" secondItem="ZWt-Ug-BG9" secondAttribute="bottom" id="35L-D8-EK1"/>
+                            <constraint firstItem="3Lg-cz-bLD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GuQ-dw-jeL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZWt-Ug-BG9" secondAttribute="trailing" id="g78-1K-b5q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Lg-cz-bLD" secondAttribute="trailing" id="oCX-ym-gDa"/>
                             <constraint firstItem="ZWt-Ug-BG9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u6G-Xw-JnT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="ZWt-Ug-BG9" id="tNh-7f-gvK"/>
+                        <outlet property="balanceLabel" destination="3Lg-cz-bLD" id="Cak-6w-8VN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

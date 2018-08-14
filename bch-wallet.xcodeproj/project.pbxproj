@@ -16,6 +16,12 @@
 		6E5154092118B77300598815 /* BitcoinCashKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5154072118B77300598815 /* BitcoinCashKit.framework */; };
 		6EA6ECB42121DA32002D1E9F /* debugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6ECB32121DA32002D1E9F /* debugLog.swift */; };
 		6EA6ECB62121F2E8002D1E9F /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6ECB52121F2E8002D1E9F /* UserDefaultsManager.swift */; };
+		6EA6ECDB2123142F002D1E9F /* DecodableDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6ECDA2123142F002D1E9F /* DecodableDataParser.swift */; };
+		6EA6ECDD21231550002D1E9F /* InsightRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6ECDC21231550002D1E9F /* InsightRequest.swift */; };
+		6EA6ECDF2123190E002D1E9F /* UtxoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6ECDE2123190E002D1E9F /* UtxoResponse.swift */; };
+		6EA6ECE121231A2F002D1E9F /* UtxoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6ECE021231A2F002D1E9F /* UtxoRequest.swift */; };
+		6EA6ECE321231E51002D1E9F /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA6ECE221231E51002D1E9F /* APIKit.framework */; };
+		6EA6ECE521231EB0002D1E9F /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA6ECE421231EB0002D1E9F /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		6E5154072118B77300598815 /* BitcoinCashKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BitcoinCashKit.framework; path = Carthage/Build/iOS/BitcoinCashKit.framework; sourceTree = "<group>"; };
 		6EA6ECB32121DA32002D1E9F /* debugLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = debugLog.swift; sourceTree = "<group>"; };
 		6EA6ECB52121F2E8002D1E9F /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		6EA6ECDA2123142F002D1E9F /* DecodableDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDataParser.swift; sourceTree = "<group>"; };
+		6EA6ECDC21231550002D1E9F /* InsightRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightRequest.swift; sourceTree = "<group>"; };
+		6EA6ECDE2123190E002D1E9F /* UtxoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtxoResponse.swift; sourceTree = "<group>"; };
+		6EA6ECE021231A2F002D1E9F /* UtxoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtxoRequest.swift; sourceTree = "<group>"; };
+		6EA6ECE221231E51002D1E9F /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		6EA6ECE421231EB0002D1E9F /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA6ECE521231EB0002D1E9F /* Result.framework in Frameworks */,
+				6EA6ECE321231E51002D1E9F /* APIKit.framework in Frameworks */,
 				6E5154082118B77300598815 /* KeychainAccess.framework in Frameworks */,
 				6E5154092118B77300598815 /* BitcoinCashKit.framework in Frameworks */,
 			);
@@ -65,14 +79,14 @@
 		6E5153F22118B0A700598815 /* bch-wallet */ = {
 			isa = PBXGroup;
 			children = (
+				6EA6ECD921231418002D1E9F /* Network */,
+				6EA6ECD7212313E7002D1E9F /* ViewControllers */,
+				6EA6ECD6212313DE002D1E9F /* Utilities */,
+				6EA6ECD5212313D5002D1E9F /* Managers */,
 				6E5153F32118B0A700598815 /* AppDelegate.swift */,
-				6E5153F52118B0A700598815 /* TopViewController.swift */,
-				6E5153F72118B0A700598815 /* TopViewController.storyboard */,
 				6E5153FA2118B0A900598815 /* Assets.xcassets */,
 				6E5153FC2118B0A900598815 /* LaunchScreen.storyboard */,
 				6E5153FF2118B0A900598815 /* Info.plist */,
-				6EA6ECB32121DA32002D1E9F /* debugLog.swift */,
-				6EA6ECB52121F2E8002D1E9F /* UserDefaultsManager.swift */,
 			);
 			path = "bch-wallet";
 			sourceTree = "<group>";
@@ -80,10 +94,56 @@
 		6E5154052118B77300598815 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6EA6ECE421231EB0002D1E9F /* Result.framework */,
+				6EA6ECE221231E51002D1E9F /* APIKit.framework */,
 				6E5154072118B77300598815 /* BitcoinCashKit.framework */,
 				6E5154062118B77300598815 /* KeychainAccess.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EA6ECD5212313D5002D1E9F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				6EA6ECB52121F2E8002D1E9F /* UserDefaultsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		6EA6ECD6212313DE002D1E9F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6EA6ECB32121DA32002D1E9F /* debugLog.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6EA6ECD7212313E7002D1E9F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6EA6ECD8212313F2002D1E9F /* Top */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6EA6ECD8212313F2002D1E9F /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				6E5153F52118B0A700598815 /* TopViewController.swift */,
+				6E5153F72118B0A700598815 /* TopViewController.storyboard */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		6EA6ECD921231418002D1E9F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6EA6ECDA2123142F002D1E9F /* DecodableDataParser.swift */,
+				6EA6ECDC21231550002D1E9F /* InsightRequest.swift */,
+				6EA6ECDE2123190E002D1E9F /* UtxoResponse.swift */,
+				6EA6ECE021231A2F002D1E9F /* UtxoRequest.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +156,7 @@
 				6E5153EC2118B0A700598815 /* Sources */,
 				6E5153ED2118B0A700598815 /* Frameworks */,
 				6E5153EE2118B0A700598815 /* Resources */,
-				6E51540A2118B78000598815 /* ShellScript */,
+				6E51540A2118B78000598815 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -154,7 +214,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6E51540A2118B78000598815 /* ShellScript */ = {
+		6E51540A2118B78000598815 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -164,7 +224,10 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/BitcoinCashKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 			);
+			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -180,9 +243,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA6ECDD21231550002D1E9F /* InsightRequest.swift in Sources */,
 				6E5153F62118B0A700598815 /* TopViewController.swift in Sources */,
 				6EA6ECB42121DA32002D1E9F /* debugLog.swift in Sources */,
 				6EA6ECB62121F2E8002D1E9F /* UserDefaultsManager.swift in Sources */,
+				6EA6ECDB2123142F002D1E9F /* DecodableDataParser.swift in Sources */,
+				6EA6ECE121231A2F002D1E9F /* UtxoRequest.swift in Sources */,
+				6EA6ECDF2123190E002D1E9F /* UtxoResponse.swift in Sources */,
 				6E5153F42118B0A700598815 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
