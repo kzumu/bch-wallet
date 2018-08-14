@@ -14,13 +14,22 @@ class TopViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateBalance()
+    }
+
+    private func setup() {
         var wif: String? = UserDefaultsManager.shared.get(item: .wif)
         if wif == nil {
             debugLog("Create new PrivateKey")
             wif = PrivateKey(network: .testnet).toWIF()
             UserDefaultsManager.shared.save(item: .wif, value: wif!)
         } else {
-            debugLog("Found exists PrivateKey")
+            debugLog("Found exists PrivateKey", "wif: ", wif!)
         }
 
         let wallet = try! Wallet(wif: wif!)
@@ -29,13 +38,8 @@ class TopViewController: UIViewController {
         debugLog("toAddress", toAddress)
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        updateBalance()
-    }
-
     private func updateBalance() {
-
+        
     }
 }
 
